@@ -1,0 +1,23 @@
+<div class="w-full h-auto flex flex-col justify-center items-center gap-20 p-6">
+  <h1 class="text-2xl font-semibold">Lista di elementi con inserimento dinamico</h1>
+
+  <div class="w-auto h-auto flex gap-4">
+    <input
+      type="text"
+      placeholder="Inserisci elemento"
+      [(ngModel)]="newElement"
+      class="border border-gray-300 p-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+
+    <button
+      (click)="updateElement()"
+      class="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      Aggiungi
+    </button>
+  </div>
+
+  <ul class="mt-4 space-y-2">
+    <li *ngFor="let item of list" class="border-b border-gray-200 pb-2"> {{ item }} </li>
+  </ul>
+</div>

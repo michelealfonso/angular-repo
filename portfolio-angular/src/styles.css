@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: #000;
+}
+
+.border-right-radial-green::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 3px;
+  background:
+    radial-gradient(circle at top right, rgb(29,185,83)  0%, rgba(0,244,200,0) 50%),
+    radial-gradient(circle at bottom left, rgb(29,185,83)  0%, rgba(0,244,200,0) 50%),
+    radial-gradient(circle at top left, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%),
+    radial-gradient(circle at bottom right, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.border-left-radial-green::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 3px;
+  background:
+    radial-gradient(circle at top left, rgb(29,185,83)  0%, rgba(0,244,200,0) 50%),
+    radial-gradient(circle at bottom right, rgb(29,185,83)  0%, rgba(0,244,200,0) 50%),
+    radial-gradient(circle at top right, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%),
+    radial-gradient(circle at bottom left, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.border-right-radial-sky::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 3px;
+  background:
+    radial-gradient(circle at top right, rgb(0,184,255) 0%, rgba(234,15,107,0) 50%),
+    radial-gradient(circle at bottom left, rgb(0,184,255) 0%, rgba(234,15,107,0) 50%),
+    radial-gradient(circle at top left, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%),
+    radial-gradient(circle at bottom right, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.border-left-radial-sky::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 3px;
+  background:
+    radial-gradient(circle at top left, rgb(0,184,255) 0%, rgba(234,15,107,0) 50%),
+    radial-gradient(circle at bottom right, rgb(0,184,255) 0%, rgba(234,15,107,0) 50%),
+    radial-gradient(circle at top right, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%),
+    radial-gradient(circle at bottom left, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}

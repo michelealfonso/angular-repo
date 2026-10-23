@@ -1,0 +1,40 @@
+<div class="w-full h-auto flex flex-col justify-center items-center p-10 bg-gray-50 rounded-xl shadow-xl">
+  <h1 class="text-3xl font-semibold text-center text-blue-600 mb-6">Todoist To-Do List</h1>
+
+  <input
+    type="text"
+    id="input"
+    [(ngModel)]="newItem"
+    class="w-full max-w-lg p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    placeholder="Aggiungi una nuova attività"
+  />
+
+  <button
+    class="w-full max-w-lg bg-blue-600 text-white p-3 rounded-lg mb-6 hover:bg-blue-700 transition-all"
+    (click)="addItems()"
+  >
+    Aggiungi
+  </button>
+
+  <div *ngFor="let item of items; let i = index" class="w-full max-w-lg mb-4 p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
+    <div class="flex items-center justify-between">
+      <li [ngClass]="{'line-through text-gray-400': item.completed}" class="text-lg font-medium">
+        {{ item.title }}
+      </li>
+      <div class="flex gap-4">
+        <button
+          (click)="checkedItems(i)"
+          class="text-sm text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          Completata
+        </button>
+        <button
+          (click)="removeItems(i)"
+          class="text-sm text-red-600 hover:text-red-800 transition-colors"
+        >
+          Elimina
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

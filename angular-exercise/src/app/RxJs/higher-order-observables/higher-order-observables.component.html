@@ -1,0 +1,8 @@
+<div>
+  <h1 class="text-[30px] font-bold"> A cosa servono gli observable di ordine superiore? </h1>"
+  <div class="flex">
+     @for(url of urlObservable$ | async; track url) {
+    <p> {{url}} </p>
+  }
+  </div>
+</div>

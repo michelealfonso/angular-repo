@@ -1,0 +1,62 @@
+<div class="w-full h-auto flex flex-col gap-20">
+  <!-- esercizio 1 -->
+
+  <app-welcome></app-welcome>
+
+  <!-- esercizio 2 -->
+
+  <app-input-user></app-input-user>
+
+  <!-- esercizio 3 -->
+
+  <app-dinamic-list></app-dinamic-list>
+
+  <!-- esercizio 4 -->
+
+  <app-background></app-background>
+  <app-background-2></app-background-2>
+
+  <p class="text-center"> {{ message }} </p>
+
+  <!-- esercizio 5 -->
+
+  <app-todo-list></app-todo-list>
+
+  <div [ngClass]="isSpecial ? special : ''"> this is a special div </div>
+
+  <div [ngStyle]="currentStyles"> this is a div with ngstyle </div>
+
+  <p> This is a normal element </p>
+
+  <ng-template>
+    <p>This is a template fragment {{ name }} </p>
+  </ng-template>
+
+  <button (click)="show = !show"> {{ show ? "hide text" : "show text" }} </button>
+
+  <p class="w-full h-auto flex justify-center items-center" *ngIf="show">
+    text to show
+  </p>
+
+  <h1 class=" w-full h-auto flex justify-center items-center text-red-500"> {{ messageService }} </h1>
+
+  <!-- cambio colore del testo con directive -->
+
+  <h1 class="w-full h-auto flex justify-center items-center" appMyDirective> {{ directiveText }} </h1>
+
+  <app-count></app-count>
+
+  <h1> Books </h1>
+
+  <app-books [books]="(books$ | async)!" (add)="onAdd($event)"></app-books>
+  <app-collection-books [books]="(bookCollection$ | async)!" (remove)="onRemove($event)"></app-collection-books>
+
+  <h1 class="text-[30px] text-center font-bold"> Signals </h1>
+
+  <h3 class="text-[20px] text-center font-bold"> Incremento con l'uso del signal </h3>
+
+  <app-signals></app-signals>
+
+  <app-rxjs></app-rxjs>
+
+</div>

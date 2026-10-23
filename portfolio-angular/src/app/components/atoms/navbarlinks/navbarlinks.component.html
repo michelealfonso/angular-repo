@@ -1,0 +1,17 @@
+<ul
+  class="hidden lg:list-none lg:flex lg:justify-center lg:items-center lg:gap-[40px] lg:leading-normal">
+  <li
+    (click)="scrollNavigation(navlink.id)"
+    *ngFor="let navlink of navlinks; index as i"
+      class="
+        text-[20px]
+      text-white
+        hover:underline
+        hover:underline-offset-[16px]
+      hover:decoration-white
+        text-normal
+        cursor-pointer"
+      >
+        {{navlink.title}}
+  </li>
+</ul>

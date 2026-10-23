@@ -1,0 +1,29 @@
+<div class="flex flex-col justify-center items-center gap-5">
+  <h1 class="text-[30px] font-bold">
+    Gestione di stato VS Gestione di stato con NgRx Esempio del counter
+  </h1>
+
+  <h3 class="text-[20px] font-bold">Incremento counter in Angular classico</h3>
+
+  <p>
+    Counteggio: <span [ngStyle]="changeColorStyle"> {{ count }} </span>
+  </p>
+  <button (click)="handleIncrement()"> Incrementa </button>
+  <button (click)="handleDecrement()" >Decrementa </button>
+  <button (click)="handleReset()"> Reset </button>
+</div>
+
+<div class="flex flex-col justify-center items-center gap-5">
+  <h1 class="text-[30px] font-bold"> Gestione di stato con NgRx - Counter </h1>
+
+
+  <h3 class="text-[20px] font-bold">Incremento counter con NgRx </h3>
+
+<p>
+  Counteggio: <span [ngStyle]="getColorStyle(count$ | async)"> {{ count$ | async }} </span>
+</p>
+
+<button (click)="handleIncrementNgRx()"> Incrementa </button>
+<button (click)="handleDecrementNgRx()"> Decrementa </button>
+<button (click)="handleResetNgRx()"> Reset </button>
+</div>

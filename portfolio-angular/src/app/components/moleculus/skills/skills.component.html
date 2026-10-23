@@ -1,0 +1,22 @@
+<div class="flex flex-col justify-center items-center gap-8">
+  <div class=" w-full h-auto flex flex-col justify-center items-center">
+    <h1 class="text-zinc-200  text-[28px] text-center font-bold">
+      Frontend Development
+    </h1>
+  </div>
+
+  <div class="w-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[2.5rem]">
+    <div
+    *ngFor="let experience of experiences"
+    class="w-auto flex justify-around items-start gap-5">
+      <img
+        class="w-[25px] h-[25px]"
+        src="{{'../assets/icons/sign.svg'}}"/>
+      <div class="w-[100px]">
+        <h1 class="text-[18px] text-zinc-200 font-bold">
+          {{experience.skills}}
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>

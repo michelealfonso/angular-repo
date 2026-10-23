@@ -1,0 +1,65 @@
+<div
+id="about-section"
+class="
+  relative
+  w-full
+  h-auto
+  md:h-screen
+  flex
+  flex-col
+  justify-center
+  items-center
+  gap-[50px]"
+>
+  <div class="relative z-50">
+    <app-header title="About Me" description="Get To Know More"></app-header>
+  </div>
+
+  <div  class="w-full h-auto flex flex-col justify-center items-center gap-8">
+
+    <div class="w-full h-auto flex flex-col md:flex-row gap-[50px]">
+      <div
+      *ngFor="let about of abouts; index as i"
+      [ngClass]="about.border ? 'border-right-radial-green' : 'border-left-radial-sky'"
+      class="
+        relative
+        w-full
+        h-auto
+        flex
+        flex-col
+        justify-center
+        items-center"
+      >
+      <div
+       class="
+        w-full
+        h-auto
+        flex
+        flex-col
+        justify-center
+        items-start
+        rounded-2xl
+        p-[30px]
+        top-0
+        left-0
+        ">
+          <h1 style="font-size: 40px;" class="text-zinc-200">
+            {{about.title}}
+          </h1>
+          <app-show
+            contentId="{{about.id}}"
+            visibleText="{{about.description.visible}}"
+            collapsibleText="{{about.description.collapsible}}"
+          >
+          </app-show>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+

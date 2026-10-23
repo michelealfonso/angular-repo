@@ -1,0 +1,6 @@
+<div>
+  @for(book of books; track $index) {
+     <p>{{book.title}}</p><span> by {{book.authors}}</span>
+    <button (click)="add.emit(book?.id)"> Add to collection </button>
+  }
+</div>

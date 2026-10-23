@@ -1,0 +1,36 @@
+<p class="text-gray-500 dark:text-gray-400"
+[innerHTML]="visibleText">
+  {{visibleText}}
+</p>
+<div
+  id="{{ contentId }}"
+  class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300"
+  aria-labelledby="hs-show-hide-collapse">
+  <p
+  class="text-gray-500 dark:text-gray-400"
+  [innerHTML]="collapsibleText">
+  >
+    {{collapsibleText}}
+  </p>
+</div>
+<p class="mt-2">
+  <button
+  type="button"
+    class= "
+    hs-collapse-toggle
+    inline-flex
+    items-center
+    gap-x-1
+    text-[15px]
+    font-semibold
+    bg-gradient-to-r from-[#1DB953] to-[#00b8ff]
+    bg-clip-text
+    text-transparent
+    grayscale hover:grayscale-0"
+    id="hs-show-hide-collapse"
+    [attr.data-hs-collapse]="'#' + contentId"
+    >
+    <span class="hs-collapse-open:hidden">Read more</span>
+    <span class="hs-collapse-open:block hidden">Read less</span>
+  </button>
+</p>

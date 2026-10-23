@@ -1,0 +1,16 @@
+<div class="flex flex-col justify-center items-center gap-5">
+  <p>
+    questo è il count: <span [ngStyle]="changeColorstyle"> {{ count() }} </span>
+  </p>
+    <p>
+    questo è il doubleCount: <span [ngStyle]="changeColorstyle"> {{ doubleCount() }} </span>
+  </p>
+  <div class="flex gap-5">
+    <button (click)="incremented()">incrementa</button>
+    <button (click)="decremented()">decrementa</button>
+  </div>
+
+  <div class="flex gap-5">
+    <p> {{ name() }} </p>
+  </div>
+</div>

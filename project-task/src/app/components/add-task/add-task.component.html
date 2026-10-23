@@ -1,0 +1,27 @@
+<button
+  (click)="showAddTaskPrompt()"
+  class="w-full flex justify-center items-center my-4 p-4 bg-gray-300 rounded-lg shadow-sm"
+>
+  <img class="w-5 h-5" [src]="plusImage" alt="" />
+</button>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    <div
+      class="flex justify-between items-center px-10 py-4 bg-gray-200 rounded-lg shadow-sm"
+    >
+      <p class="text-black"> {{task.description}} </p>
+      <div class="w-auto h-auto flex gap-5">
+        <button (click)="onEditTask(task.id, task.description)">
+          <img class="w-7 h-7" [src]="modifyImage" alt="" />
+        </button>
+
+        <button
+          (click)="onDeleteTask(task.id)">
+          <img class="w-7 h-7" [src]="trashImage" alt="" />
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>
+

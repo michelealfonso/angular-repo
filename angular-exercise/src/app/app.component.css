@@ -1,0 +1,11 @@
+.special-class {
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Cambia il colore di sfondo */
+  border-radius: 10px;        /* Aggiungi degli angoli arrotondati */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Aggiungi una leggera ombra */
+} 

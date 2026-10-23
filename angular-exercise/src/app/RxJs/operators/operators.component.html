@@ -1,0 +1,14 @@
+<div class="flex flex-col justify-center items-center gap-5">
+  <h1 class="text-[30px] font-bold">A cosa servono gli Operators?</h1>
+
+  <div *ngIf="filteredObjects$ | async as filteredObjects">
+    @for(object of filteredObjects; track object.id) {
+    <p [ngClass]="{
+      ' text-red-500': object.id === 2,
+      'text-blue-500': object.id === 4
+    }">
+      {{ object.name }}
+    </p>
+    }
+  </div>
+</div>

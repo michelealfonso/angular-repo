@@ -1,0 +1,43 @@
+<div
+  class="relative w-auto h-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-[50px]"
+>
+  <div
+  *ngFor="let project of projects; index as i"
+  [ngClass]="project.border ? 'border-left-radial-sky' : 'border-right-radial-green'"
+  class="
+    relative
+    w-auto
+    md:w-full
+    h-auto
+    md:h-full
+    flex
+    flex-col
+    md:flex-row
+    justify-center
+    items-center
+    top-0
+    left-0"
+  >
+    <div
+      class="
+      w-full
+      md:h-full
+      flex
+      flex-col
+      justify-center
+      items-center
+      p-[30px]
+      rounded-3xl"
+    >
+      <div class="w-full h-auto flex flex-col justify-center items-center gap-5">
+        <img
+          class="w-[200px] h-[200px] rounded-3xl"
+          src="{{project.picture}}"
+          alt=""
+        >
+          <h1 class="text-[20px] font-bold text-white"> {{project.title}} </h1>
+          <app-button-project [project]="project"></app-button-project>
+      </div>
+    </div>
+  </div>
+</div>
